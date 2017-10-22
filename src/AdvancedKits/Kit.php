@@ -114,7 +114,7 @@ class Kit{
             	if($ench instanceof CustomEnchants){
             		/** @var \PiggyCustomEnchants\Main $customEnchants */
 					$customEnchants = Server::getInstance()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-					$customEnchants->addEnchantment($item, $ench,(int) $name_level);
+					$customEnchants->addEnchantment($item, $ench->getName(), (int) $name_level);
 				}else {
 					$item->addEnchantment($ench->setLevel((int) $name_level));
 				}
