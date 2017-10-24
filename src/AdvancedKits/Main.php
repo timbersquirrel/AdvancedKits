@@ -37,12 +37,6 @@ class Main extends PluginBase{
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 
         // Add enchantments not registered in PocketMine
-		if (Enchantment::getEnchantmentByName("KNOCKBACK") === null){
-			Enchantment::registerEnchantment(new Enchantment(Enchantment::KNOCKBACK, "%enchantment.knockback", Enchantment::RARITY_COMMON, Enchantment::ACTIVATION_SELF, Enchantment::SLOT_NONE));
-		}
-		if (Enchantment::getEnchantmentByName("SHARPNESS") === null){
-			Enchantment::registerEnchantment(new Enchantment(Enchantment::SHARPNESS, "%enchantment.sharpness", Enchantment::RARITY_COMMON, Enchantment::ACTIVATION_SELF, Enchantment::SLOT_NONE));
-		}
 		$customEnchants = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
 		if ($customEnchants !== null) {
 			$this->getServer()->getLogger()->info(TextFormat::GREEN . "[Advanced Kits] Using PiggyCustomEnchants!");
